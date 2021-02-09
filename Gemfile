@@ -2,14 +2,15 @@ source 'https://rubygems.org'
 
 ruby '2.5.7'
 
-gem 'rails',        '4.2.8'
-gem 'sass-rails',   '~> 5.0.1'
-gem 'uglifier',     '2.5.3'
-gem 'coffee-rails', '4.1.0'
-gem 'jquery-rails', '4.0.3'
-gem 'turbolinks',   '2.3.0'
-gem 'jbuilder',     '2.2.3'
-gem 'sdoc',         '0.4.0', group: :doc
+gem 'rails',          '4.2.8'
+gem 'sass-rails',     '~> 5.0.1'
+gem 'uglifier',       '2.5.3'
+gem 'coffee-rails',   '4.1.0'
+gem 'jquery-rails',   '4.0.3'
+gem 'turbolinks',     '2.3.0'
+gem 'jbuilder',       '2.2.3'
+gem 'sdoc',           '0.4.0', group: :doc
+gem 'bootstrap-sass', '~> 3.2.0.0'
 
 group :development, :test do
   gem 'sqlite3',      '1.3.9'
