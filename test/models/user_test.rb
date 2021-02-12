@@ -62,6 +62,14 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
 
+  test "email should be saved to database in downcase register" do
+    email = "Hello@GMAIL.com"
+    @user.email = email
+    @user.save
+    @user.reload
+    assert_equal @user.email, email.downcase
+  end
+
   # password validation
 
   test "password should have a min length" do
