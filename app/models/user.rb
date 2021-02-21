@@ -10,15 +10,17 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   has_secure_password
 
-  def User.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ?
-             BCrypt::Engine::MIN_COST :
-             BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
-  end
+  class << self
+    def digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ?
+               BCrypt::Engine::MIN_COST :
+               BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
 
-  def User.new_token
-    SecureRandom.urlsafe_base64
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
   end
 
   def remember
