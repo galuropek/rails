@@ -1,0 +1,12 @@
+one:
+  follower: test_user
+  followed: lana
+two:
+  follower: test_user
+  followed: malloy
+three:
+  follower: lana
+  followed: test_user
+four:
+  follower: test_user_2
+  followed: test_user
